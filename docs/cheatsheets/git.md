@@ -1,5 +1,16 @@
 # Шпаргалка: Git
 
+## Скопировать существующий remote repo
+
+```bash
+cd ~/University/Projects
+git clone https://github.com/OWNER/REPO.git
+cd REPO
+git status
+```
+
+## Обычная работа в уже существующем repo
+
 ```bash
 git status
 git diff
@@ -10,16 +21,24 @@ git push
 git pull
 ```
 
-Создать repo:
+## Создать новый local repo
 
 ```bash
+cd /path/to/project
 git init -b main
 ```
 
-Создать GitHub repo из текущей папки:
+## Создать private GitHub repo из current folder
 
 ```bash
 gh repo create NAME --private --source=. --remote=origin --push
 ```
 
-Вопрос при любой путанице: **какие файлы изменены, какой commit сейчас HEAD, и есть ли незакоммиченные изменения?**
+Если потерялся:
+
+```bash
+pwd
+git status
+```
+
+Сначала пойми **в какой folder ты находишься**, затем уже думай про Git.

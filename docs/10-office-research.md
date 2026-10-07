@@ -1,76 +1,71 @@
-# 10. Учёба: документы, источники и перевод
+# 10. Учёба: документы, sources и перевод
+
+## Перед началом
+
+ONLYOFFICE, Zotero и DeepL были установлены в уроке 2. Если какой-то app пропущен:
+
+```bash
+brew install --cask onlyoffice zotero deepl
+```
 
 ## ONLYOFFICE
 
 ONLYOFFICE — бесплатный desktop editor для `.docx`, `.xlsx`, `.pptx`.
 
-Homebrew:
+<https://www.onlyoffice.com/>
 
-```bash
-brew install --cask onlyoffice
-```
+Проверь также, даёт ли университет Microsoft 365 Education. Для business/logistics coursework настоящий Excel может понадобиться из-за VBA, add-ins или требований преподавателя.
 
-Но есть важное правило: **проверь, даёт ли университет Microsoft 365 Education**. Для business/logistics coursework настоящий Excel может понадобиться из-за VBA, сложных add-ins или требований преподавателя.
-
-ONLYOFFICE: <https://www.onlyoffice.com/>
-
-Microsoft Education: <https://www.microsoft.com/education/products/office-365-education>
+<https://www.microsoft.com/education/products/office-365-education>
 
 ## Zotero
 
-Zotero нужен не “когда-нибудь для диплома”, а с первого задания, где есть источники.
+Начни пользоваться Zotero с первого задания, где есть sources.
 
 Используй его для:
 
-- книг и статей;
+- books/articles;
 - PDFs;
 - metadata;
 - citation styles;
 - bibliography.
 
-Quick Start: <https://www.zotero.org/support/quick_start_guide>
-
-Homebrew:
-
-```bash
-brew install --cask zotero
-```
+Quick Start:
+<https://www.zotero.org/support/quick_start_guide>
 
 ## Перевод
 
-### Лучший учебный вариант: Chat
-
-Вместо буквального перевода:
+Для обучения обычно полезнее Chat:
 
 ```text
-Объясни этот текст по-русски.
-Оставь ключевые английские термины в скобках.
-Отдельно выпиши 8 терминов, которые мне надо запомнить на английском.
+Объясни этот text по-русски.
+Оставь ключевые English terms в скобках.
+Отдельно выпиши 8 терминов, которые мне нужно узнавать на английском.
 ```
 
-### Быстрый буквальный перевод: DeepL
+DeepL удобен для быстрого буквального перевода phrase/document.
 
-```bash
-brew install --cask deepl
+## Папки курса для реальной учёбы
+
+Сохраняй исходные материалы отдельно от собственных notes:
+
+```text
+~/University/Sources/   # PDFs, datasets, original materials
+~/University/Notes/     # твои Markdown notes
 ```
 
-DeepL удобен, когда объяснение не нужно — нужен быстрый перевод фразы или документа.
-
-## PDFs и лекционные материалы
-
-Хороший workflow:
-
-1. сохранить PDF в понятную course folder;
-2. добавить источник в Zotero;
-3. открыть материал в Chat и спросить конкретные вопросы;
-4. свои заметки писать в Obsidian;
-5. не заменять собственные notes гигантской AI summary.
+Не клади большие PDFs и datasets в private notes repo без причины.
 
 ## Практика
 
-Возьми одну статью по предмету:
+Возьми одну реальную статью по предмету:
 
-- добавь её в Zotero;
-- создай Obsidian note с 5 собственными пунктами;
-- попроси Chat проверить, какие важные идеи ты мог пропустить;
-- сгенерируй 5 вопросов для self-test.
+1. сохрани PDF в `~/University/Sources`;
+2. добавь source в Zotero;
+3. создай Obsidian note с пятью собственными пунктами;
+4. попроси Chat найти возможные gaps;
+5. попроси Chat провести self-test из пяти вопросов.
+
+## Checkpoint
+
+Ты должен понимать, где хранится **source material**, а где твои **notes**, и зачем Zotero решает отдельную задачу от Obsidian.

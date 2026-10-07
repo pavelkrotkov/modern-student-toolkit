@@ -1,84 +1,87 @@
 # 3. Chat, Work и Codex
 
-> Проверено: **2026-10-07**. Этот раздел быстро меняется; сверяйся с актуальными страницами OpenAI.
+> Проверено: **2026-10-07**. Названия и limits могут меняться; первичные ссылки даны ниже.
 
-## Простая модель
+## Перед началом
+
+Установлен новый ChatGPT Desktop и выполнен вход в account.
+
+## Сначала научись выбирать режим
 
 | Задача | Режим |
 |---|---|
 | объяснить, перевести, обсудить, проверить понимание | **Chat** |
-| выполнить длинную многошаговую работу и выдать законченный результат | **Work** |
-| работать с папкой, файлами, Terminal, Git, небольшими техническими проектами | **Codex** |
+| выполнить длинную многошаговую работу и выдать finished deliverable | **Work** |
+| работать с локальными folders, files, Terminal, Git или technical project | **Codex** |
 
-OpenAI формулирует это почти так же: Chat — conversational help, Work — longer multi-step work and deliverables, Codex — technical/software work.
-
-Источник: <https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex>
-
-## Как не расходовать агентный лимит зря
-
-Если задача решается разговором, переводом или объяснением — оставайся в **Chat**.
-
-Work и Codex используют общую структуру agentic usage/credits на планах, где она применяется. Поэтому нет смысла запускать Codex только чтобы спросить: “что такое Git branch?”.
-
-Для такой задачи Chat лучше:
-
-> Объясни мне по-русски, что такое Git branch. Оставь английские технические термины в скобках и дай один бытовой пример.
-
-## Какую модель выбирать в Work/Codex
-
-Если в твоём account доступен **GPT-6.1 Sol**:
-
-1. **GPT-6.1 Sol — Medium**: обычный default. Хороший баланс качества, скорости и allowance.
-2. **GPT-6.1 Sol — XHigh**: сложная задача, где важнее качество, чем расход.
-3. **GPT-6 Astra — Low/Medium**: escalation, если задача реально сложная или Sol застрял.
-
-Не повышай reasoning просто “на всякий случай”. OpenAI прямо отмечает, что higher effort расходует больше allowance и не гарантирует лучший результат.
+В desktop app выбери **ChatGPT** или **Codex** сверху слева. В ChatGPT переключай **Chat / Work**.
 
 Текущая справка:
-<https://help.openai.com/en/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex>
-
-Модели в Work/Codex:
 <https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex>
 
-## Лимиты и как их смотреть
+## Простое правило расхода allowance
 
-Не думай о Codex как о “N сообщений в неделю”. Расход зависит от:
+Если задачу можно решить разговором — используй **Chat**.
 
-- модели;
-- reasoning effort;
-- длины контекста;
-- размера output;
-- инструментов и длительности agent task;
-- local/cloud execution;
-- speed mode.
+Не открывай Codex только чтобы спросить “что означает `git clone`?”. Для объяснения Chat проще и обычно экономнее.
 
-Проверяй реальный account meter:
+## Models в Work/Codex
 
-- ChatGPT Desktop → **Settings → Usage** (название раздела может меняться);
-- в Codex CLI: `/status`;
-- CodexBar в menu bar.
+Если в твоём account доступны эти варианты, baseline курса:
 
-OpenAI usage guide:
+1. **GPT-6.1 Sol — Medium**: обычный default.
+2. **GPT-6.1 Sol — XHigh**: сложная задача, где качество важнее расхода.
+3. **GPT-6 Astra — Low/Medium**: escalation, если задача действительно сложна или Sol застрял.
+
+Не повышай reasoning effort автоматически.
+
+Актуальная справка:
+<https://help.openai.com/en/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex>
+
+## Usage limits
+
+Не представляй allowance как фиксированное “N prompts”. Расход зависит от model, reasoning, context и длительности agent work.
+
+Проверяй:
+
+- официальный usage meter в ChatGPT;
+- CodexBar в macOS menu bar;
+- если позже начнёшь использовать Codex CLI — `/status`.
+
+Codex/plan guide:
 <https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan>
 
 ## CodexBar
 
-Установка уже включена в `Brewfile` или отдельно:
+Ты установил его в уроке 2. Открой CodexBar из Applications, разреши запуск, если macOS спросит, и оставь иконку в menu bar.
 
-```bash
-brew install --cask codexbar
+CodexBar — удобный индикатор; если цифры расходятся с официальным OpenAI usage meter, ориентируйся на OpenAI.
+
+Проект:
+<https://github.com/steipete/CodexBar>
+
+## Первый tutor prompt
+
+`$teach-me` пока **не установлен**. Используй обычный prompt:
+
+```text
+Я не программист. Объясняй по-русски, но сохраняй важные English technical terms.
+Не делай практическое упражнение полностью за меня.
+Сначала объясни цель, затем дай один следующий шаг.
 ```
 
-Проект: <https://github.com/steipete/CodexBar>
-
-CodexBar показывает usage windows и reset times, если источник/аккаунт предоставляет эти данные. Это удобный индикатор, но при расхождении ориентируйся на официальный usage meter OpenAI.
+Мы превратим этот pattern в настоящий reusable skill в уроке 8.
 
 ## Мини-упражнение
 
-Для трёх задач выбери режим до того, как открывать ChatGPT:
+Определи режим:
 
-1. “Переведи абзац лекции и объясни термин.”
-2. “Исследуй пять компаний и сделай таблицу сравнения с источниками.”
-3. “В этой папке переименуй файлы по понятной схеме и покажи diff.”
+1. “Переведи и объясни абзац лекции.”
+2. “Исследуй пять shipping companies и сделай sourced comparison.”
+3. “Работай с файлами в моей practice folder и покажи, что изменилось.”
 
-Ответ: Chat → Work → Codex.
+Ответ: **Chat → Work → Codex**.
+
+## Checkpoint
+
+Ты должен уметь открыть каждый из трёх режимов и своими словами объяснить, зачем нужен каждый.

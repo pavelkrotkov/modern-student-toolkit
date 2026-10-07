@@ -1,57 +1,68 @@
 # 9. Python без курса программирования
 
-Цель — не “выучить Python”. Цель — понимать, что делает небольшой script, уметь его запустить и обсуждать с Codex изменения.
+## Перед началом
+
+Ты уже прошёл Git/Skills и `$teach-me` работает. Python пока мог вообще не быть установлен — это нормально.
+
+Цель — не “выучить Python”. Цель — понимать, что делает маленький script, уметь его запустить и обсуждать изменения с Codex.
+
+## 1. Установи инструменты только сейчас
+
+```bash
+brew install uv ripgrep
+brew install --cask visual-studio-code
+```
+
+Проверка:
+
+```bash
+uv --version
+rg --version
+```
+
+`uv` может сам управлять подходящей Python version и project environment.
+
+Документация:
+<https://docs.astral.sh/uv/>
 
 ## Что нужно знать
 
-- `.py` — текстовый файл с Python code;
+- `.py` — text file с Python code;
 - **interpreter** выполняет Python;
-- **variable** хранит значение;
+- **variable** хранит value;
 - **function** — именованный кусок работы;
-- **library/package** — готовый внешний код;
-- **virtual environment** изолирует зависимости проекта.
+- **library/package** — готовый внешний code;
+- **virtual environment** отделяет dependencies одного project от другого.
 
-Этого достаточно для начала.
-
-## Почему `uv`
-
-`uv` может управлять Python version, environment и dependencies без исторического зоопарка команд.
-
-Документация: <https://docs.astral.sh/uv/>
-
-Создать маленький project:
+## 2. Создай первый project
 
 ```bash
 cd ~/University/Projects
 uv init first-python-project
 cd first-python-project
-uv run python
+pwd
 ```
 
-Выйти из интерактивного Python:
+Теперь открой именно эту folder в Codex.
+
+## 3. Попроси `$teach-me`
 
 ```text
-exit()
+$teach-me Я не программист.
+Покажи мне, какие files создал `uv init`, и объясни их роль.
+Потом помоги запустить минимальный Python program.
+Не добавляй лишние libraries.
 ```
 
-## Первый реальный script
+Если позже работаешь с реальным CSV, попроси Codex сначала объяснить data и предложить очень маленький analysis.
 
-Не начинай с абстрактного курса. Возьми CSV, который связан с учёбой — например, shipping/port/trade data — и попроси Codex:
-
-```text
-$teach-me Я не программист. В этой папке CSV с учебными данными.
-Сначала объясни структуру файла. Затем предложи очень маленький Python script,
-который считает 2–3 понятных показателя. Объясни код строка за строкой,
-но не превращай это в полный курс Python.
-```
-
-Если нужна library:
+Например library:
 
 ```bash
 uv add pandas
 ```
 
-Запуск:
+Запуск script:
 
 ```bash
 uv run python main.py
@@ -61,10 +72,10 @@ uv run python main.py
 
 Ты можешь открыть 20–40 строк простого Python и примерно объяснить:
 
-- откуда приходят данные;
-- какие функции вызываются;
-- что программа выдаёт;
-- где изменить имя файла или параметр;
-- как запустить script снова.
+- откуда приходят data;
+- что вызывается;
+- что script выдаёт;
+- где изменить filename или parameter;
+- как запустить его снова.
 
-Это уже полезная техническая грамотность.
+Этого достаточно для первой версии курса.

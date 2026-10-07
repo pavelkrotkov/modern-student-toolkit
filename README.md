@@ -2,49 +2,39 @@
 
 Практический курс для студента, который **не собирается становиться программистом**, но хочет уверенно пользоваться современным Mac, ChatGPT, Codex, Git/GitHub, Obsidian и небольшими автоматизациями.
 
-Курс написан по-русски, но сохраняет английские технические термины. Это намеренно: команды, ошибки, документация и интерфейсы почти всегда встречаются на английском.
+**Начинать нужно с сайта, а не с этого repository:**
+
+**https://pavelkrotkov.github.io/modern-student-toolkit/**
+
+Курс рассчитан на человека, который в начале может не знать, что такое `git clone`, working directory или “корень repo”. Поэтому первые уроки не требуют локальной копии этого repository. Клонирование самого курса появляется позже как учебное упражнение в разделе Git.
+
+## Для ученика
+
+1. Открой сайт по ссылке выше в обычном browser.
+2. Начни с **«0. Начало»**.
+3. Иди по порядку: каждый урок явно пишет, что должно быть уже сделано.
+4. Если что-то не получается, используй страницу **«Если застрял»** и ChatGPT в browser.
+5. Не запускай команды из файлов этого repository только потому, что увидел их на GitHub.
 
 ## Что внутри
 
-- базовая работа с файлами, папками и Terminal;
-- установка и обновление программ через Homebrew;
-- Chat vs Work vs Codex: какой режим выбирать и как не тратить лимиты впустую;
-- работа Codex с локальными папками, browser use и Computer Use;
+- Finder, файлы, папки и Terminal с нуля;
+- Homebrew и понятная установка/обновление программ;
+- Chat vs Work vs Codex;
+- работа Codex с выбранными folders, browser и Computer Use;
 - MIT Missing Semester 2026 с русскоязычным AI-сопровождением;
-- Git/GitHub на уровне грамотного пользователя, а не разработчика;
-- Obsidian + private GitHub repo;
+- Git/GitHub на уровне грамотного пользователя;
+- Obsidian + отдельный private GitHub repo для заметок;
 - персональный Codex skill `$teach-me`;
-- Python как грамотность и средство автоматизации, а не как отдельная профессия;
+- Python как техническая грамотность;
 - ONLYOFFICE, Zotero и перевод;
 - минимальное обслуживание Mac.
 
-Сайт собирается из Markdown через [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) и разворачивается на GitHub Pages.
+Курс написан по-русски, но сохраняет английские technical terms. Команды, paths, filenames, code и literal error messages не переводятся.
 
-## Локальный просмотр сайта
+## Для авторов и contributors
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-mkdocs serve
-```
-
-Откройте <http://127.0.0.1:8000>.
-
-## Публикация в новый public GitHub repo
-
-На Mac с Homebrew:
-
-```bash
-brew install gh
-./scripts/publish.sh
-```
-
-Скрипт создаёт public repo `pavelkrotkov/modern-student-toolkit`, включает GitHub Pages в режиме GitHub Actions и запускает deployment workflow. Перед публикацией можно передать другое имя:
-
-```bash
-./scripts/publish.sh USER/REPO
-```
+Инструкции по локальной сборке сайта и изменению курса вынесены в [CONTRIBUTING.md](CONTRIBUTING.md), чтобы не смешивать их с учебным маршрутом.
 
 ## Лицензия
 

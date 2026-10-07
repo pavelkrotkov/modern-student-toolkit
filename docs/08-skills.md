@@ -1,61 +1,120 @@
 # 8. Skills и `$teach-me`
 
-Skill — reusable workflow: набор инструкций и ресурсов, которые агент может применять повторно.
+## Перед началом
 
-OpenAI описывает skill как папку с обязательным `SKILL.md`, где есть `name`, `description` и инструкции:
+Course repo уже клонирован сюда:
+
+```text
+~/University/Projects/modern-student-toolkit
+```
+
+Ты понимаешь, что такое path и local repo.
+
+## Что такое skill
+
+Skill — reusable workflow: небольшая папка с `SKILL.md`, которую Codex может использовать как повторяемую инструкцию.
+
+OpenAI:
 <https://developers.openai.com/plugins/concepts/skills>
 
-## `$teach-me`
+## 1. Посмотри source `$teach-me`
 
-В этом repo уже есть:
+Source skill лежит в уже клонированном course repo:
+
+```text
+~/University/Projects/modern-student-toolkit/skills/teach-me/SKILL.md
+```
+
+Посмотри его без изменения:
+
+```bash
+cat ~/University/Projects/modern-student-toolkit/skills/teach-me/SKILL.md
+```
+
+Это обычный Markdown file.
+
+## 2. Установи skill для своего user account
+
+Codex поддерживает user-scoped skills в `~/.codex/skills/`.
+
+Создай destination:
+
+```bash
+mkdir -p ~/.codex/skills/teach-me
+```
+
+Скопируй один file:
+
+```bash
+cp ~/University/Projects/modern-student-toolkit/skills/teach-me/SKILL.md \
+  ~/.codex/skills/teach-me/SKILL.md
+```
+
+Посмотри, что получилось:
+
+```bash
+cat ~/.codex/skills/teach-me/SKILL.md
+```
+
+Закрой и снова открой ChatGPT Desktop/Codex, чтобы новый skill точно обнаружился.
+
+OpenAI example user-scoped path:
+<https://developers.openai.com/blog/eval-skills>
+
+## 3. Первый вызов
+
+Открой в Codex `~/University/Projects/Codex-Practice` и напиши:
+
+```text
+$teach-me Помоги мне понять git status и git diff в этой папке.
+```
+
+Если Codex не узнаёт `$teach-me`, открой [«Если застрял»](help.md) и приложи:
+
+```bash
+ls -la ~/.codex/skills/teach-me
+cat ~/.codex/skills/teach-me/SKILL.md
+```
+
+## 4. Зачем мы ждали до урока 8
+
+До Git-урока локального `modern-student-toolkit` не существовало. Поэтому ссылка вида:
 
 ```text
 skills/teach-me/SKILL.md
 ```
 
-Его задача — заставить Codex **обучать**, а не просто мгновенно выполнять упражнение.
+раньше была бы скрытым prerequisite.
 
-Ключевые правила:
-
-- объяснять по-русски;
-- сохранять English technical terms;
-- команды и код никогда не переводить;
-- давать минимум теории перед действием;
-- позволять ученику выполнить простой шаг самому;
-- сначала hint, потом полный ответ;
-- destructive actions сначала preview;
-- завершать коротким recap и самостоятельным заданием.
-
-## Как вызывать
-
-Когда skill установлен/доступен в Codex:
+Теперь ты понимаешь весь путь:
 
 ```text
-$teach-me Помоги мне понять git status и git diff на этой папке.
+GitHub remote course
+→ git clone
+→ local course repo
+→ SKILL.md
+→ ~/.codex/skills/teach-me/
+→ $teach-me
 ```
 
-В Codex built-in skill creator вызывается как:
+## 5. Создание собственных skills — только после использования готового
+
+Built-in creator:
 
 ```text
 $skill-creator
 ```
 
-OpenAI example: <https://developers.openai.com/blog/eval-skills>
+OpenAI:
+<https://developers.openai.com/plugins/build/skills>
 
-## Хорошие первые собственные skills
+Хорошие идеи позже:
 
-Не делай десятки. Достаточно одного-двух реальных повторяемых процессов.
+- `$lecture-prep`;
+- `$course-review`.
 
-Например:
+Не создавай десятки skills заранее.
 
-- `$lecture-prep` — подготовить bilingual vocabulary и вопросы перед лекцией;
-- `$course-review` — по заметкам недели сделать quiz и список непонятных мест.
+## Checkpoint
 
-## Плохой skill
-
-Огромный универсальный prompt на десять страниц, который пытается управлять всем Codex сразу.
-
-Skills полезны именно для **конкретного повторяемого workflow**.
-
-Дополнительный актуальный материал OpenAI:
-<https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra>
+`$teach-me` должен сработать в **другой** folder, например `Codex-Practice`, а не только в course repo. Это подтверждает, что skill установлен user-scoped.

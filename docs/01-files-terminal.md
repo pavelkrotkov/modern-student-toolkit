@@ -1,19 +1,105 @@
-# 1. Файлы, папки и Terminal
+# 1. Finder, файлы, папки и Terminal
 
-## Что нужно понять
+## Перед началом
 
-Компьютер хранит файлы в иерархии папок. Terminal просто даёт другой способ работать с той же самой системой, которую Finder показывает графически.
+Должен быть пройден урок 0. В `~/University` уже существуют:
+
+`Notes`, `Projects`, `Sources`, `Scratch`.
+
+Git и Homebrew всё ещё не нужны.
+
+## Finder и Terminal показывают одну систему
+
+Finder — графический способ видеть файлы. Terminal — текстовый способ работать с теми же файлами.
 
 Ключевые термины:
 
-- **папка / директория (folder / directory)**;
-- **путь (path)** — адрес файла или папки;
-- **рабочая директория (working directory)** — папка, относительно которой сейчас выполняются команды;
-- `~` — твоя домашняя папка;
-- `..` — родительская папка;
-- `.имя` — часто скрытый файл или папка.
+- **folder / directory** — папка;
+- **path** — адрес файла или папки;
+- **working directory** — папка, относительно которой Terminal сейчас выполняет команды;
+- `~` — твоя home folder;
+- `..` — parent directory.
 
-## Шесть команд, которых пока достаточно
+## 1. Открой Terminal
+
+Нажми **Command+Space**, введи `Terminal`, нажми Enter.
+
+Появится окно с приглашением командной строки. Ничего опасного от самого открытия Terminal не происходит.
+
+## 2. Узнай, где ты находишься
+
+Введи:
+
+```bash
+pwd
+```
+
+На Mac ответ обычно заканчивается именем твоего user account. `pwd` означает **print working directory**.
+
+Теперь:
+
+```bash
+ls
+```
+
+В списке должна быть папка `University`.
+
+## 3. Перейди в University
+
+```bash
+cd ~/University
+pwd
+ls
+```
+
+После `pwd` path должен заканчиваться на `/University`.
+
+После `ls` должны быть видны:
+
+```text
+Notes
+Projects
+Scratch
+Sources
+```
+
+`cd` означает **change directory**.
+
+## 4. Убедись, что Finder и Terminal видят одно и то же
+
+```bash
+open .
+```
+
+Точка `.` означает **current directory**. Finder должен открыть именно `University`.
+
+## 5. Создай безопасную practice folder
+
+```bash
+cd ~/University/Projects
+mkdir Codex-Practice
+cd Codex-Practice
+pwd
+open .
+```
+
+В Finder создай внутри `Codex-Practice` три обычных text files, например:
+
+```text
+one.txt
+two.txt
+old.txt
+```
+
+Вернись в Terminal:
+
+```bash
+ls
+```
+
+Ты должен увидеть те же три файла.
+
+## Пока достаточно шести команд
 
 ```bash
 pwd
@@ -24,34 +110,23 @@ open .
 cat
 ```
 
-Что они делают:
+`cat FILE` позже позволит показать содержимое простого text file.
 
-- `pwd` — показывает текущую папку;
-- `ls` — показывает содержимое;
-- `cd NAME` — переходит в папку;
-- `cd ..` — на уровень выше;
-- `mkdir NAME` — создаёт папку;
-- `open .` — открывает текущую папку в Finder;
-- `cat FILE` — показывает текстовый файл.
-
-## Практика
-
-```bash
-cd ~/University
-pwd
-ls
-mkdir Codex-Practice
-cd Codex-Practice
-open .
-```
-
-Создай в Finder три обычных текстовых файла. Вернись в Terminal и снова выполни `ls`.
-
-Цель упражнения — увидеть, что Finder и Terminal показывают **одни и те же файлы**.
-
-## MIT companion
+## MIT companion — только после практики выше
 
 2026 Course Overview + Introduction to the Shell:
+
 <https://missing.csail.mit.edu/2026/course-shell/>
 
-Не пытайся запомнить всю лекцию. Пока нужны пути, `pwd`, `ls`, `cd`, quoting и идея pipe (`|`).
+Не пытайся освоить лекцию целиком. Пока нужны paths, `pwd`, `ls`, `cd` и идея working directory.
+
+## Checkpoint
+
+Без подсказки ответь:
+
+1. Что показывает `pwd`?
+2. Что означает `~`?
+3. Чем Finder отличается от Terminal в этом упражнении?
+4. Как открыть текущую Terminal-папку в Finder?
+
+Если ответы неясны, попроси Chat объяснить их по-русски и повтори шаги 2–4.

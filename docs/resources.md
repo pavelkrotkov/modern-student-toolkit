@@ -4,11 +4,15 @@
 
 ## OpenAI / Codex
 
+- Download ChatGPT Desktop — <https://chatgpt.com/download/>
+- Downloading the macOS app — <https://help.openai.com/en/articles/9275200-downloading-the-chatgpt-macos-app>
 - ChatGPT Work and Codex — <https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex>
+- Built-in browser — <https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app>
 - Using Codex with your ChatGPT plan — <https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan>
 - Managing usage with GPT-6 Astra in Work and Codex — <https://help.openai.com/en/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex>
 - Skills concept — <https://developers.openai.com/plugins/concepts/skills>
-- Rethinking skills and prompts for GPT-6 Astra — <https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra>
+- Skill creation — <https://developers.openai.com/plugins/build/skills>
+- User-scoped Codex skill example — <https://developers.openai.com/blog/eval-skills>
 
 ## MIT Missing Semester
 
@@ -26,6 +30,7 @@
 
 ## Git / GitHub
 
+- Cloning a repository — <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
 - GitHub CLI repo creation — <https://cli.github.com/manual/gh_repo_create>
 - GitHub Education — <https://github.com/education/students>
 - GitHub Skills — <https://skills.github.com/>
@@ -42,4 +47,3 @@
 
 - Material for MkDocs — <https://squidfunk.github.io/mkdocs-material/>
 - Publishing to GitHub Pages — <https://squidfunk.github.io/mkdocs-material/publishing-your-site/>
-- GitHub Pages REST API — <https://docs.github.com/en/rest/pages/pages>

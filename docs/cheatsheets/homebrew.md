@@ -13,11 +13,15 @@ brew cleanup
 brew doctor
 ```
 
-Brewfile:
+## Reference Brewfile этого курса
+
+Только после урока Git, когда course repo уже клонирован:
 
 ```bash
-brew bundle check
-brew bundle
+brew bundle check --file ~/University/Projects/modern-student-toolkit/Brewfile
 ```
 
-Справка: <https://docs.brew.sh/>
+`brew bundle` без `--file` ищет Brewfile относительно current directory, поэтому beginner course не должен полагаться на него “из неизвестной папки”.
+
+Справка:
+<https://docs.brew.sh/>

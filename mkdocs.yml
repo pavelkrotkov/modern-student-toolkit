@@ -31,16 +31,17 @@ markdown_extensions:
 nav:
   - Главная: index.md
   - 0. Начало: 00-start.md
-  - 1. Файлы, папки и Terminal: 01-files-terminal.md
+  - Если застрял: help.md
+  - 1. Finder, файлы и Terminal: 01-files-terminal.md
   - 2. Homebrew и программы: 02-homebrew.md
   - 3. Chat, Work и Codex: 03-chat-work-codex.md
-  - "4. Codex: папки и Computer Use": 04-codex-folders-computer-use.md
+  - "4. Codex: folders и Computer Use": 04-codex-folders-computer-use.md
   - 5. MIT Missing Semester: 05-missing-semester.md
   - 6. Git и GitHub: 06-git-github.md
   - 7. Obsidian + GitHub: 07-obsidian.md
   - 8. Skills и $teach-me: 08-skills.md
   - 9. Python без курса программирования: 09-python-literacy.md
-  - 10. Учёба, документы и источники: 10-office-research.md
+  - 10. Учёба, документы и sources: 10-office-research.md
   - 11. Поддержание Mac в порядке: 11-maintenance.md
   - Шпаргалки:
       - Terminal: cheatsheets/terminal.md

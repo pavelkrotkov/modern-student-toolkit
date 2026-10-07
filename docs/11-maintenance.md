@@ -1,6 +1,8 @@
 # 11. Поддержание Mac в порядке
 
-Mac не требует постоянной “оптимизации”. Полезнее редкие понятные действия.
+## Перед началом
+
+К этому моменту Homebrew и основные apps уже используются регулярно. Этот урок — routine, а не ежедневная “оптимизация”.
 
 ## Раз в месяц
 
@@ -11,30 +13,27 @@ brew upgrade
 brew cleanup
 ```
 
-Проверить Brewfile:
+Если хочешь проверить reference Brewfile курса, используй **полный path**, а не зависимость от current directory:
 
 ```bash
-brew bundle check
+brew bundle check --file ~/University/Projects/modern-student-toolkit/Brewfile
 ```
 
-Если чего-то не хватает:
+Если course repo давно не обновлялся, сначала:
 
 ```bash
-brew bundle
+cd ~/University/Projects/modern-student-toolkit
+git pull
 ```
+
+`brew bundle` автоматически устанавливать всё из reference file не обязательно: курс специально устанавливал tools постепенно.
 
 ## Если заканчивается место
 
-Сначала диагностика:
+Сначала:
 
 ```bash
 mo analyze
-```
-
-Или machine-readable report для Codex:
-
-```bash
-mo analyze --json ~/Documents
 ```
 
 Перед cleanup:
@@ -43,31 +42,39 @@ mo analyze --json ~/Documents
 mo clean --dry-run
 ```
 
-Только после просмотра списка решай, запускать ли:
+И только после просмотра решай, нужен ли:
 
 ```bash
 mo clean
 ```
 
-Mole safety guidance:
+Mole:
 <https://github.com/tw93/Mole>
 
 ## Периодически
 
-- установить macOS security updates;
-- проверить, что backup действительно работает;
+- macOS security updates;
+- убедиться, что backup действительно выполняется;
 - посмотреть свободное место;
-- удалить приложения, которые больше не нужны, нормальным uninstaller или `mo uninstall` с preview;
-- не устанавливать пять “Mac cleaner” приложений одновременно.
+- удалить действительно ненужные apps;
+- не устанавливать несколько “Mac cleaner” utilities.
 
-## Если что-то сломалось после обновления Brew
+Если есть внешний диск, настрой Time Machine и иногда проверяй дату последнего successful backup.
+
+## Если Homebrew ведёт себя странно
 
 ```bash
 brew doctor
 ```
 
-Затем прочитай вывод. Не копируй случайные команды из форума, не понимая их.
+Прочитай output. Если непонятно — пришли весь output Chat, а не запускай случайные forum fixes.
 
-## Проверка Codex usage
+## Codex usage
 
-Перед длинной agent task посмотри официальный usage meter и CodexBar. Если weekly allowance низкий, используй Chat для объяснений и оставь Codex для задач, которым действительно нужны files/tools.
+Перед длинной Work/Codex task посмотри официальный usage meter и CodexBar. Если weekly allowance почти закончился, оставь agent work для задач, которым реально нужны tools/files, а объяснения делай в Chat.
+
+## Итоговая привычка
+
+Хороший Mac обычно требует меньше “чистки”, чем кажется. Нормальная routine:
+
+**updates → backup → free space check → понятные удаления**.

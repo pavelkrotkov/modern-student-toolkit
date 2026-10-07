@@ -1,62 +1,114 @@
-# 2. Homebrew и программы
+# 2. Homebrew и установка программ
 
-Homebrew — **package manager**: один проверяемый способ устанавливать, обновлять и удалять большое количество программ.
+## Перед началом
 
-Официальная документация: <https://docs.brew.sh/Installation>
+Ты уже умеешь:
 
-## Установка
+- открыть Terminal;
+- выполнить `pwd`, `ls`, `cd`;
+- перейти в `~/University`.
 
-Используй команду с официальной страницы <https://brew.sh/>. После установки Terminal может попросить добавить Homebrew в `PATH`; выполни именно команды, которые он показывает.
+Локальная копия этого course repo **ещё не нужна**.
+
+## Что такое Homebrew
+
+Homebrew — **package manager**: единый способ устанавливать и обновлять много Mac-программ из Terminal.
+
+Официальный сайт: <https://brew.sh/>
+
+## 1. Установи Homebrew
+
+Открой <https://brew.sh/> в browser.
+
+На главной странице есть одна install command. **Копируй её именно с официального сайта**, вставь в Terminal и нажми Enter.
+
+Во время установки macOS может:
+
+- попросить твой Mac password;
+- предложить установить Apple Command Line Tools;
+- попросить нажать Enter для продолжения.
+
+Это нормально.
+
+В конце Homebrew может показать блок **Next steps** и команды для добавления Homebrew в `PATH`. Выполни эти команды **точно такими, как их показал installer**.
 
 Проверка:
 
 ```bash
 brew --version
-brew doctor
 ```
 
-## Установить набор курса
+Если видишь version number — Homebrew работает.
 
-Из корня этого репозитория:
+## 2. Установи базовые command-line tools
 
 ```bash
-brew bundle
+brew install git gh mole
 ```
 
-`Brewfile` устанавливает:
+Проверка:
 
-### Основное
+```bash
+git --version
+gh --version
+mo --version
+```
 
-- `git` — история изменений;
-- `gh` — GitHub из Terminal;
-- `mole` — анализ/обслуживание Mac;
-- ChatGPT;
-- Codex CLI;
-- CodexBar;
-- ONLYOFFICE;
-- Obsidian;
-- Zotero;
-- DeepL.
+Если одна команда ведёт себя иначе, открой [«Если застрял»](help.md) и пришли точный output.
 
-### Инструменты, которые пригодятся позже
+## 3. Установи основные приложения
 
-- `uv` — Python и его зависимости;
-- `ripgrep` (`rg`) — быстрый поиск по текстовым файлам;
-- GitHub Desktop — визуальные commits/diffs;
-- VS Code — удобный текстовый/кодовый редактор.
+```bash
+brew install --cask chatgpt codexbar onlyoffice obsidian zotero deepl github
+```
 
-Проверенные Homebrew entries на 2026-10-07:
+Здесь:
 
-- <https://formulae.brew.sh/cask/chatgpt>
-- <https://formulae.brew.sh/cask/codex>
-- <https://formulae.brew.sh/cask/codexbar>
-- <https://formulae.brew.sh/formula/mole>
-- <https://formulae.brew.sh/formula/gh>
-- <https://formulae.brew.sh/formula/uv>
+- `chatgpt` — новый ChatGPT desktop app, который включает Chat, Work и Codex;
+- `codexbar` — menu-bar индикатор usage;
+- `onlyoffice` — документы/таблицы/презентации;
+- `obsidian` — Markdown notes;
+- `zotero` — sources/citations;
+- `deepl` — быстрый перевод;
+- `github` — GitHub Desktop.
 
-## Как обновлять
+Официальный ChatGPT download также доступен здесь:
+<https://chatgpt.com/download/>
 
-Раз в несколько недель или перед важной работой:
+## 4. Открой ChatGPT Desktop
+
+Через Finder → Applications открой **ChatGPT** и войди в тот же account.
+
+По текущей версии приложения Chat, Work и Codex находятся в одном desktop app:
+<https://help.openai.com/en/articles/9275200-downloading-the-chatgpt-macos-app>
+
+## 5. Mole: сначала только анализ
+
+```bash
+mo analyze
+```
+
+Ничего не удаляй только потому, что tool показывает caches.
+
+Если позже понадобится cleanup:
+
+```bash
+mo clean --dry-run
+```
+
+`--dry-run` сначала показывает план без удаления.
+
+Mole: <https://github.com/tw93/Mole>
+
+## Что пока НЕ делать
+
+Не запускай `brew bundle`. `Brewfile` находится в course repository, а мы сознательно **ещё не клонировали repository**. К Brewfile вернёмся после Git-урока.
+
+Не устанавливай Python/VS Code только потому, что они упомянуты в curriculum. Они появятся тогда, когда будут нужны.
+
+## Как обновлять установленное
+
+Раз в несколько недель:
 
 ```bash
 brew update
@@ -65,28 +117,19 @@ brew upgrade
 brew cleanup
 ```
 
-Если Homebrew ведёт себя странно:
+При проблемах:
 
 ```bash
 brew doctor
 ```
 
-Homebrew сам периодически обновляет метаданные при командах установки/upgrade; не нужно ежедневно запускать `brew update` вручную.
+## Checkpoint
 
-## Brewfile = воспроизводимый Mac
+Перед уроком 3:
 
-Проверить, соответствует ли компьютер `Brewfile`:
-
-```bash
-brew bundle check
-```
-
-Установить всё недостающее:
-
-```bash
-brew bundle
-```
-
-Это первая встреча с полезной идеей **configuration as code**: список программ хранится в обычном текстовом файле и отслеживается Git.
-
-Источник: <https://docs.brew.sh/Brew-Bundle-and-Brewfile>
+- [ ] `brew --version` работает;
+- [ ] `git --version` работает;
+- [ ] `gh --version` работает;
+- [ ] `mo analyze` запускается;
+- [ ] ChatGPT Desktop открывается;
+- [ ] в ChatGPT ты видишь Chat/Work и отдельный Codex view.

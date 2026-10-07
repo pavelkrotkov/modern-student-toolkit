@@ -1,66 +1,88 @@
 # 5. MIT Missing Semester 2026
 
-[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/2026/) — лучший backbone для этой части курса, но проходить его целиком не нужно.
+## Перед началом
 
-В 2026 edition есть девять лекций, включая отдельную **Agentic Coding**. Это особенно удачно для нашего подхода.
+Ты умеешь пользоваться Chat для объяснений и умеешь открыть безопасную practice folder в Codex.
 
-## Обязательный минимум
+Custom `$teach-me` skill появится позже; здесь он **не требуется**.
+
+[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/2026/) — backbone технической части курса. Проходить все девять лекций подряд не нужно.
+
+## Что проходить сейчас
 
 | MIT lecture | Что взять |
 |---|---|
-| Course Overview + Introduction to the Shell | shell, paths, pipes, basic commands |
+| Course Overview + Introduction to the Shell | shell, paths, basic commands, pipes |
 | Command-line Environment | выборочно: environment, help, useful shell habits |
 | Development Environment and Tools | editors/tools, AI context |
-| Version Control and Git | repo, commit, diff, branch, remote |
-| Agentic Coding | agents, instructions, skills, supervision |
+| Version Control and Git | после нашего Git-урока |
+| Agentic Coding | после Git и Skills |
 
-Остальное — позже по интересу.
+Главная страница:
+<https://missing.csail.mit.edu/2026/>
 
-Главная страница: <https://missing.csail.mit.edu/2026/>
+## Английский: не переводить всё заранее
 
-Agentic Coding: <https://missing.csail.mit.edu/2026/agentic-coding/>
+Цель — понимать материал **и одновременно узнавать English technical vocabulary**.
 
-Git: <https://missing.csail.mit.edu/2026/version-control/>
-
-## Что делать с английским
-
-Не надо сначала переводить весь курс. Технический английский полезно видеть в оригинале.
-
-Перед лекцией спроси Chat:
+Перед лекцией открой Chat:
 
 ```text
-Я собираюсь смотреть лекцию MIT Missing Semester по ссылке: <URL>.
-Дай мне 5-минутное введение по-русски.
-Сохраняй важные английские technical terms в скобках.
-Составь список из 10 английских слов, которые мне нужно узнавать на слух.
+Я собираюсь смотреть MIT Missing Semester:
+<URL>
+
+Я лучше понимаю русский, чем английский.
+Дай 5-минутное введение по-русски.
+Сохраняй важные English technical terms в скобках.
+Дай 10 слов, которые мне важно узнавать на слух.
 ```
 
-Во время лекции:
+Во время:
 
 ```text
 Объясни этот абзац по-русски простыми словами.
-Команды и технические термины не переводи; объясни их отдельно.
+Commands, filenames и technical terms не переводи; объясни их отдельно.
 ```
 
-После лекции:
+После:
 
 ```text
-Проверь, понял ли я лекцию. Задавай по одному вопросу.
-Не показывай ответ, пока я не попробую.
+Проверь, понял ли я материал.
+Задавай по одному вопросу и не показывай ответ, пока я не попробую.
 ```
 
-## Codex для упражнений
+## Codex для упражнения — без custom skill
 
-Открой отдельную practice folder и используй:
+Если упражнение требует Terminal/files, открой отдельную folder, например:
 
 ```text
-$teach-me Я делаю упражнение 3 из этой лекции Missing Semester.
-Сначала объясни, чему оно должно меня научить.
-Дай только первый шаг или подсказку.
+~/University/Projects/Missing-Semester-Practice
 ```
 
-Если Codex просто выдаёт готовый ответ, останови его. Здесь цель — **понять действие**, а не быстрее закрыть упражнение.
+Если folder ещё нет:
 
-## Дополнительный перевод
+```bash
+mkdir -p ~/University/Projects/Missing-Semester-Practice
+```
 
-DeepL установлен через `Brewfile` и удобен для отдельных абзацев. Для технического обучения Chat обычно полезнее, потому что может не просто перевести, а объяснить контекст.
+Открой её в Codex и напиши:
+
+```text
+Я делаю упражнение из MIT Missing Semester и хочу научиться, а не получить готовый ответ.
+Сначала объясни, чему упражнение должно меня научить.
+Потом дай только первый безопасный шаг или одну подсказку.
+```
+
+В уроке 8 этот повторяющийся prompt станет `$teach-me`.
+
+## DeepL
+
+DeepL уже установлен и удобен для буквального перевода небольших passages. Для обучения Chat часто полезнее, потому что может объяснить context.
+
+## Checkpoint
+
+После первой MIT shell lecture ты должен узнавать:
+
+`path`, `working directory`, `shell`, `command`, `argument`, `pipe`.
+
+Не обязан помнить все команды из лекции.

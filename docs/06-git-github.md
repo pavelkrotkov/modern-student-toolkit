@@ -1,28 +1,116 @@
-# 6. Git и GitHub — только нужное
+# 6. Git и GitHub: сначала clone, потом свой repo
 
-Git — не GitHub.
+## Перед началом
 
-- **Git** хранит историю изменений в папке.
-- **GitHub** хранит удалённую копию repository и даёт веб-интерфейс, sharing и collaboration.
+Установлены `git`, `gh` и GitHub Desktop. Ты умеешь перейти в `~/University/Projects`.
 
-## Пять понятий
+До этого урока курс **не требовал локальной копии самого себя**.
 
-**repository (repo)** — папка, историю которой отслеживает Git.
+## Что такое Git и GitHub
 
-**commit** — именованный snapshot изменений.
+- **Git** хранит историю изменений в folders.
+- **GitHub** хранит repositories на server и даёт web interface.
+- **remote repository** — repo на GitHub.
+- **local repository** — его копия на твоём Mac.
+- **clone** — создать local copy существующего remote repo.
 
-**diff** — что именно изменилось.
+## 1. Первый `git clone`: скачай этот курс
 
-**branch** — отдельная линия изменений.
-
-**push/pull** — отправить изменения на GitHub / получить их обратно.
-
-Для начала этого достаточно.
-
-## Первая локальная история
+В Terminal:
 
 ```bash
-cd ~/University/Codex-Practice
+cd ~/University/Projects
+pwd
+```
+
+Убедись, что output заканчивается на:
+
+```text
+/University/Projects
+```
+
+Теперь:
+
+```bash
+git clone https://github.com/pavelkrotkov/modern-student-toolkit.git
+```
+
+Git должен создать:
+
+```text
+~/University/Projects/modern-student-toolkit
+```
+
+Перейди туда:
+
+```bash
+cd ~/University/Projects/modern-student-toolkit
+pwd
+git status
+```
+
+Теперь впервые имеет смысл выражение **root of the repository**: это папка `modern-student-toolkit`, внутри которой находятся `README.md`, `docs/`, `Brewfile` и `.git`.
+
+Посмотри:
+
+```bash
+ls
+```
+
+Официальный GitHub guide:
+<https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
+
+## 2. Почему clone был первым Git-упражнением
+
+Ты уже видел этот course как website. Теперь у тебя появилась **local copy его source files**.
+
+Это связывает три идеи:
+
+```text
+GitHub remote repo → git clone → local folder on your Mac
+```
+
+Пока ничего в course repo не редактируй и не push.
+
+## 3. Проверь Brewfile — теперь path существует
+
+Раньше команда была бы непонятной. Теперь можно безопасно проверить:
+
+```bash
+brew bundle check --file ~/University/Projects/modern-student-toolkit/Brewfile
+```
+
+Она только сообщает, какие entries из reference `Brewfile` установлены. Она не нужна для ежедневной работы.
+
+## 4. GitHub account и CLI
+
+Если GitHub account ещё нет, создай его на <https://github.com/> и включи 2FA.
+
+Затем:
+
+```bash
+gh auth login
+```
+
+Выбирай GitHub.com и browser/HTTPS flow, если CLI предлагает варианты.
+
+Student benefits:
+<https://github.com/education/students>
+
+## 5. Пять понятий
+
+- **repository** — folder с Git history;
+- **commit** — named snapshot;
+- **diff** — что изменилось;
+- **branch** — отдельная линия history;
+- **push / pull** — отправить commits / получить новые commits.
+
+## 6. Создай свой маленький practice repo
+
+Не используй course repo. Работай с созданной раньше папкой:
+
+```bash
+cd ~/University/Projects/Codex-Practice
 git init -b main
 git status
 git add .
@@ -30,64 +118,50 @@ git commit -m "Initial practice files"
 git log --oneline
 ```
 
-Не заучивай команды. После каждой спроси себя: **какой snapshot или состояние я сейчас изменил?**
-
-## GitHub CLI
-
-Войти:
-
-```bash
-gh auth login
-```
-
-Создать private repo из текущей папки:
+Теперь опубликуй **private** repo:
 
 ```bash
 gh repo create codex-practice --private --source=. --remote=origin --push
 ```
 
-## GitHub Desktop
+Открой GitHub.com и найди `codex-practice`.
 
-Используй его как визуальный способ увидеть:
+## 7. Увидь diff
 
-- changed files;
-- diff;
-- commit history;
-- branch.
-
-Terminal всё ещё нужен, но GUI помогает сформировать правильную картину.
-
-## Что не нужно пока
-
-Не надо учить:
-
-- rebase;
-- cherry-pick;
-- bisect;
-- submodules;
-- сложные merge strategies.
-
-## MIT companion
-
-<https://missing.csail.mit.edu/2026/version-control/>
-
-MIT объясняет модель Git глубже, чем нужно для этого курса. Пойми snapshots/commits/references; advanced exercises оставь на потом.
-
-## GitHub Education
-
-Если университет подходит под eligibility, оформи student benefits:
-<https://github.com/education/students>
-
-## Мини-упражнение
-
-Измени один `.txt` файл и выполни:
+Измени один `.txt` file в Finder или text editor.
 
 ```bash
+cd ~/University/Projects/Codex-Practice
 git status
 git diff
+```
+
+Посмотри то же изменение в GitHub Desktop.
+
+Затем:
+
+```bash
 git add .
 git commit -m "Update practice note"
 git push
 ```
 
-Посмотри тот же commit на GitHub.com и в GitHub Desktop.
+## Что пока не нужно
+
+Не учи `rebase`, `cherry-pick`, `bisect`, submodules или сложные merge strategies.
+
+MIT companion:
+<https://missing.csail.mit.edu/2026/version-control/>
+
+## Checkpoint
+
+Ты должен своими словами объяснить цепочку:
+
+**GitHub repo → clone → local folder → change → diff → commit → push**.
+
+И на Mac должны существовать два разных repo:
+
+```text
+~/University/Projects/modern-student-toolkit   # public course, cloned
+~/University/Projects/Codex-Practice           # твой private practice repo
+```
