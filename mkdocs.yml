@@ -13,7 +13,6 @@ theme:
     - navigation.top
     - navigation.footer
     - content.code.copy
-    - content.action.edit
     - search.suggest
     - search.highlight
 
@@ -23,29 +22,41 @@ markdown_extensions:
   - md_in_html
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
 
+validation:
+  links:
+    anchors: warn
+
 nav:
   - Главная: index.md
-  - 0. Начало: 00-start.md
+  - Основной маршрут:
+      - 0. Подготовка: 00-start.md
+      - 1. Mac и файлы: 01-files-terminal.md
+      - 2. Работа с ИИ: 03-chat-work-codex.md
+      - 3. Источники и заметки: 07-obsidian.md
+      - 4. Документ и таблица: 10-office-research.md
+      - 5. Terminal и Homebrew: 02-homebrew.md
+      - 6. Агент и файлы: 04-codex-folders-computer-use.md
+      - 7. Git и GitHub: 06-git-github.md
+      - 8. Немного Python: 09-python-literacy.md
+      - 9. Итоговая работа: 12-capstone.md
   - Если застрял: help.md
-  - 1. Finder, файлы и Terminal: 01-files-terminal.md
-  - 2. Homebrew и программы: 02-homebrew.md
-  - 3. Chat, Work и Codex: 03-chat-work-codex.md
-  - "4. Codex: папки и управление компьютером": 04-codex-folders-computer-use.md
-  - 5. MIT Missing Semester: 05-missing-semester.md
-  - 6. Git и GitHub: 06-git-github.md
-  - 7. Obsidian + GitHub: 07-obsidian.md
-  - 8. Навыки Codex и $teach-me: 08-skills.md
-  - 9. Python без курса программирования: 09-python-literacy.md
-  - "10. Учёба: документы, источники и перевод": 10-office-research.md
-  - 11. Поддержание Mac в порядке: 11-maintenance.md
+  - Дополнительно:
+      - MIT Missing Semester: 05-missing-semester.md
+      - Навык $teach-me: 08-skills.md
+      - Резервные копии и обслуживание: 11-maintenance.md
   - Шпаргалки:
       - Terminal: cheatsheets/terminal.md
       - Homebrew: cheatsheets/homebrew.md
       - Git: cheatsheets/git.md
-      - Codex: cheatsheets/codex.md
+      - Работа с ИИ: cheatsheets/codex.md
+  - Учебные источники:
+      - Условия поездки: practice/trip-brief.md
+      - Расценки: practice/trip-prices.md
   - Ссылки и источники: resources.md

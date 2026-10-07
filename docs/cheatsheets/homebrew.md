@@ -1,27 +1,25 @@
 # Шпаргалка: Homebrew
 
+Используй после [урока 5](../02-homebrew.md). `ИМЯ` замени именем программы из её официальной инструкции.
+
+| Команда | Результат |
+|---|---|
+| `brew --version` | Проверка установки |
+| `brew info ИМЯ` | Сведения о программе |
+| `brew install ИМЯ` | Установка инструмента командной строки |
+| `brew install --cask ИМЯ` | Установка графического приложения |
+| `brew update` | Обновление сведений о пакетах |
+| `brew outdated` | Список устаревших пакетов |
+| `brew upgrade` | Обновление установленных пакетов |
+| `brew cleanup --dry-run` | Просмотр предполагаемой очистки |
+| `brew doctor` | Диагностические сведения |
+
+Программы устанавливаем перед применением: `git gh` — в уроке 5, `uv` и `visual-studio-code` — в уроке 8. Уже установленное вручную приложение не нужно повторно устанавливать через Homebrew.
+
+Образец `Brewfile` необязателен. Проверять его можно после клонирования курса:
+
 ```bash
-brew search NAME
-brew info NAME
-brew install NAME
-brew install --cask APP
-brew uninstall NAME
-brew update
-brew outdated
-brew upgrade
-brew cleanup
-brew doctor
+brew bundle check --verbose --file ~/University/Projects/modern-student-toolkit/Brewfile
 ```
 
-## Образец Brewfile из курса
-
-Только после урока Git, когда ты уже скачал репозиторий курса:
-
-```bash
-brew bundle check --file ~/University/Projects/modern-student-toolkit/Brewfile
-```
-
-Без параметра `--file` команда `brew bundle` ищет Brewfile в текущей директории. Поэтому курс не предлагает запускать её из неизвестной папки.
-
-Справка:
-<https://docs.brew.sh/>
+Сообщение о недостающих программах не означает, что нужно немедленно установить весь набор. [Обслуживание](../11-maintenance.md), [официальная справка](https://docs.brew.sh/Manpage).

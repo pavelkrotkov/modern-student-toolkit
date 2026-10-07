@@ -1,18 +1,13 @@
-# Образец набора программ для курса.
-# Начинающий ученик устанавливает программы постепенно, по мере прохождения уроков.
-# Не предлагайте запускать `brew bundle` до урока Git.
+# Образец программ основного технического маршрута.
+# Устанавливайте нужное в соответствующем уроке, не весь набор заранее.
+# Графические приложения в первых уроках можно установить с официальных сайтов.
 
 brew "git"
 brew "gh"
 brew "uv"
-brew "mole"
-brew "ripgrep"
 
 cask "chatgpt"
-cask "codexbar"
-cask "onlyoffice"
 cask "obsidian"
 cask "zotero"
-cask "deepl"
-cask "github"
+cask "onlyoffice"
 cask "visual-studio-code"
