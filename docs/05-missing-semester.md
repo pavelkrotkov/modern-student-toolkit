@@ -2,28 +2,28 @@
 
 ## Перед началом
 
-Ты умеешь пользоваться Chat для объяснений и умеешь открыть безопасную practice folder в Codex.
+Ты умеешь пользоваться Chat для объяснений и умеешь открыть папку для упражнений в Codex.
 
-Custom `$teach-me` skill появится позже; здесь он **не требуется**.
+Личный навык `$teach-me` появится позже; здесь он **не требуется**.
 
-[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/2026/) — backbone технической части курса. Проходить все девять лекций подряд не нужно.
+[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/2026/) — основа технической части нашей программы. Проходить все девять лекций подряд не нужно.
 
 ## Что проходить сейчас
 
-| MIT lecture | Что взять |
+| Лекция MIT | Что изучить |
 |---|---|
-| Course Overview + Introduction to the Shell | shell, paths, basic commands, pipes |
-| Command-line Environment | выборочно: environment, help, useful shell habits |
-| Development Environment and Tools | editors/tools, AI context |
+| Course Overview + Introduction to the Shell | командную оболочку, пути, основные команды, конвейеры |
+| Command-line Environment | выборочно: окружение, справку и удобные приёмы работы с Terminal |
+| Development Environment and Tools | редакторы, инструменты и работу с ИИ |
 | Version Control and Git | после нашего Git-урока |
-| Agentic Coding | после Git и Skills |
+| Agentic Coding | после уроков Git и навыков Codex |
 
 Главная страница:
 <https://missing.csail.mit.edu/2026/>
 
 ## Английский: не переводить всё заранее
 
-Цель — понимать материал **и одновременно узнавать English technical vocabulary**.
+Цель — понимать материал **и одновременно осваивать английские технические термины**.
 
 Перед лекцией открой Chat:
 
@@ -33,7 +33,7 @@ Custom `$teach-me` skill появится позже; здесь он **не т�
 
 Я лучше понимаю русский, чем английский.
 Дай 5-минутное введение по-русски.
-Сохраняй важные English technical terms в скобках.
+Важные английские технические термины при первом упоминании добавляй в скобках.
 Дай 10 слов, которые мне важно узнавать на слух.
 ```
 
@@ -41,7 +41,7 @@ Custom `$teach-me` skill появится позже; здесь он **не т�
 
 ```text
 Объясни этот абзац по-русски простыми словами.
-Commands, filenames и technical terms не переводи; объясни их отдельно.
+Команды, имена файлов и технические термины оставляй в оригинале; объясняй их отдельно.
 ```
 
 После:
@@ -51,15 +51,15 @@ Commands, filenames и technical terms не переводи; объясни и�
 Задавай по одному вопросу и не показывай ответ, пока я не попробую.
 ```
 
-## Codex для упражнения — без custom skill
+## Codex для упражнений — пока без личного навыка
 
-Если упражнение требует Terminal/files, открой отдельную folder, например:
+Если упражнение требует Terminal или работы с файлами, используй отдельную папку, например:
 
 ```text
 ~/University/Projects/Missing-Semester-Practice
 ```
 
-Если folder ещё нет:
+Если папки ещё нет:
 
 ```bash
 mkdir -p ~/University/Projects/Missing-Semester-Practice
@@ -73,15 +73,15 @@ mkdir -p ~/University/Projects/Missing-Semester-Practice
 Потом дай только первый безопасный шаг или одну подсказку.
 ```
 
-В уроке 8 этот повторяющийся prompt станет `$teach-me`.
+В уроке 8 вместо этого длинного запроса можно будет использовать `$teach-me`.
 
 ## DeepL
 
-DeepL уже установлен и удобен для буквального перевода небольших passages. Для обучения Chat часто полезнее, потому что может объяснить context.
+DeepL уже установлен и удобен для буквального перевода небольших фрагментов. Для учёбы Chat часто полезнее: он может не только перевести, но и объяснить смысл.
 
-## Checkpoint
+## Проверка результата
 
-После первой MIT shell lecture ты должен узнавать:
+После первой лекции MIT о командной оболочке ты должен узнавать следующие термины:
 
 `path`, `working directory`, `shell`, `command`, `argument`, `pipe`.
 

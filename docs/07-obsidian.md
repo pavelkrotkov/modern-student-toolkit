@@ -1,4 +1,4 @@
-# 7. Obsidian + отдельный private GitHub repo
+# 7. Obsidian и отдельный закрытый репозиторий GitHub
 
 ## Перед началом
 
@@ -6,20 +6,20 @@
 
 ## Важная граница
 
-`~/University` **не должен быть одним большим Git repo**.
+Вся папка `~/University` **не должна быть одним большим репозиторием Git**.
 
 Мы специально разделили:
 
 ```text
-~/University/Notes/      # только Obsidian notes
-~/University/Projects/   # отдельные projects/repos
-~/University/Sources/    # PDFs/data
+~/University/Notes/      # только заметки Obsidian
+~/University/Projects/   # отдельные проекты и репозитории
+~/University/Sources/    # файлы PDF и данные
 ~/University/Scratch/    # временные файлы
 ```
 
-Это предотвращает nested repositories и случайное смешивание course source с личными notes.
+Так мы избегаем вложенных репозиториев и случайного смешивания исходных файлов курса с личными заметками.
 
-## 1. Создай Obsidian vault
+## 1. Создай хранилище заметок Obsidian
 
 Открой Obsidian → **Open folder as vault** и выбери:
 
@@ -40,13 +40,13 @@ Notes/
 └── Templates/
 ```
 
-Здесь внешний `Notes/` — это path `~/University/Notes`; показанная структура — содержимое vault.
+Папка `~/University/Notes` — это **хранилище заметок (vault)**. На схеме показано его содержимое.
 
-Не строй сложную “идеальную knowledge system”. Начни писать notes.
+Не пытайся сразу построить идеальную систему знаний. Просто начни писать заметки.
 
-## 2. Сделай Git repo только из vault
+## 2. Создай репозиторий Git только для заметок
 
-Terminal:
+В Terminal выполни:
 
 ```bash
 cd ~/University/Notes
@@ -77,9 +77,9 @@ git commit -m "Initial university notes"
 gh repo create university-notes --private --source=. --remote=origin --push
 ```
 
-Repo должен быть **private**.
+Репозиторий должен быть **закрытым (private)**.
 
-## 3. Первый реальный note
+## 3. Первая настоящая заметка
 
 Создай:
 
@@ -89,7 +89,7 @@ Courses/Logistics/Week-01.md
 
 Добавь несколько собственных пунктов.
 
-Terminal:
+В Terminal выполни:
 
 ```bash
 cd ~/University/Notes
@@ -100,24 +100,24 @@ git commit -m "Add logistics week 1 notes"
 git push
 ```
 
-Посмотри commit на GitHub.
+Посмотри коммит на GitHub.
 
-## 4. Manual сначала, automation потом
+## 4. Сначала вручную, затем автоматизация
 
-Сделай несколько commits руками. Только после того, как `git diff` стал понятным, решай, нужен ли Obsidian Git plugin:
+Сделай несколько коммитов вручную. Когда разберёшься с `git diff`, можно будет решить, нужен ли плагин Obsidian Git для автоматической синхронизации:
 
 <https://github.com/Vinzent03/obsidian-git>
 
-GitHub — полезная remote history для text notes, но не полноценная замена Time Machine.
+GitHub хранит удалённую историю изменений текстовых заметок, но не заменяет полноценное резервное копирование через Time Machine.
 
-## Checkpoint
+## Проверка результата
 
-У тебя должны быть **три независимых repo/folder contexts**:
+У тебя должны быть **три отдельные папки с независимыми репозиториями**:
 
 ```text
-Projects/modern-student-toolkit   # course
-Projects/Codex-Practice           # practice
-Notes                             # private Obsidian notes
+Projects/modern-student-toolkit   # курс
+Projects/Codex-Practice           # упражнение
+Notes                             # закрытый репозиторий заметок Obsidian
 ```
 
-`~/University` целиком Git repo **не является**.
+Вся папка `~/University` **не является** репозиторием Git.

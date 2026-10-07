@@ -8,29 +8,29 @@
 - выполнить `pwd`, `ls`, `cd`;
 - перейти в `~/University`.
 
-Локальная копия этого course repo **ещё не нужна**.
+Локальная копия репозитория курса **ещё не нужна**.
 
 ## Что такое Homebrew
 
-Homebrew — **package manager**: единый способ устанавливать и обновлять много Mac-программ из Terminal.
+Homebrew — **менеджер пакетов (package manager)**: программа, с помощью которой можно устанавливать и обновлять другие программы из Terminal.
 
 Официальный сайт: <https://brew.sh/>
 
 ## 1. Установи Homebrew
 
-Открой <https://brew.sh/> в browser.
+Открой <https://brew.sh/> в браузере.
 
-На главной странице есть одна install command. **Копируй её именно с официального сайта**, вставь в Terminal и нажми Enter.
+На главной странице есть команда установки. **Скопируй её именно с официального сайта**, вставь в Terminal и нажми Enter.
 
 Во время установки macOS может:
 
-- попросить твой Mac password;
+- попросить пароль для входа на Mac;
 - предложить установить Apple Command Line Tools;
 - попросить нажать Enter для продолжения.
 
 Это нормально.
 
-В конце Homebrew может показать блок **Next steps** и команды для добавления Homebrew в `PATH`. Выполни эти команды **точно такими, как их показал installer**.
+В конце установщик Homebrew может показать раздел **Next steps** с командами для настройки переменной `PATH`. Выполни эти команды **точно так, как их показал установщик**.
 
 Проверка:
 
@@ -38,9 +38,9 @@ Homebrew — **package manager**: единый способ устанавлив
 brew --version
 ```
 
-Если видишь version number — Homebrew работает.
+Если появилась строка с номером версии, Homebrew работает.
 
-## 2. Установи базовые command-line tools
+## 2. Установи основные инструменты командной строки
 
 ```bash
 brew install git gh mole
@@ -54,7 +54,7 @@ gh --version
 mo --version
 ```
 
-Если одна команда ведёт себя иначе, открой [«Если застрял»](help.md) и пришли точный output.
+Если одна из проверок не удалась, открой [«Если застрял»](help.md) и отправь точный вывод Terminal.
 
 ## 3. Установи основные приложения
 
@@ -64,22 +64,22 @@ brew install --cask chatgpt codexbar onlyoffice obsidian zotero deepl github
 
 Здесь:
 
-- `chatgpt` — новый ChatGPT desktop app, который включает Chat, Work и Codex;
-- `codexbar` — menu-bar индикатор usage;
+- `chatgpt` — приложение ChatGPT для Mac с режимами Chat, Work и Codex;
+- `codexbar` — индикатор расхода лимита в строке меню;
 - `onlyoffice` — документы/таблицы/презентации;
-- `obsidian` — Markdown notes;
-- `zotero` — sources/citations;
+- `obsidian` — заметки в формате Markdown;
+- `zotero` — источники и библиографические ссылки;
 - `deepl` — быстрый перевод;
 - `github` — GitHub Desktop.
 
-Официальный ChatGPT download также доступен здесь:
+Официальная страница загрузки ChatGPT:
 <https://chatgpt.com/download/>
 
-## 4. Открой ChatGPT Desktop
+## 4. Открой ChatGPT для Mac
 
-Через Finder → Applications открой **ChatGPT** и войди в тот же account.
+Через Finder → Applications открой **ChatGPT** и войди в ту же учётную запись.
 
-По текущей версии приложения Chat, Work и Codex находятся в одном desktop app:
+В текущей версии приложения для Mac режимы Chat, Work и Codex доступны в одной программе:
 <https://help.openai.com/en/articles/9275200-downloading-the-chatgpt-macos-app>
 
 ## 5. Mole: сначала только анализ
@@ -88,9 +88,9 @@ brew install --cask chatgpt codexbar onlyoffice obsidian zotero deepl github
 mo analyze
 ```
 
-Ничего не удаляй только потому, что tool показывает caches.
+Не удаляй ничего только потому, что Mole обнаружил временные файлы.
 
-Если позже понадобится cleanup:
+Если позднее понадобится очистка:
 
 ```bash
 mo clean --dry-run
@@ -102,9 +102,9 @@ Mole: <https://github.com/tw93/Mole>
 
 ## Что пока НЕ делать
 
-Не запускай `brew bundle`. `Brewfile` находится в course repository, а мы сознательно **ещё не клонировали repository**. К Brewfile вернёмся после Git-урока.
+Не запускай `brew bundle`. `Brewfile` находится в репозитории курса, который мы сознательно **пока не клонировали**. К Brewfile вернёмся после Git-урока.
 
-Не устанавливай Python/VS Code только потому, что они упомянуты в curriculum. Они появятся тогда, когда будут нужны.
+Не устанавливай Python и VS Code только потому, что они упомянуты в программе курса. Они появятся тогда, когда будут нужны.
 
 ## Как обновлять установленное
 
@@ -123,7 +123,7 @@ brew cleanup
 brew doctor
 ```
 
-## Checkpoint
+## Проверка результата
 
 Перед уроком 3:
 
@@ -131,5 +131,5 @@ brew doctor
 - [ ] `git --version` работает;
 - [ ] `gh --version` работает;
 - [ ] `mo analyze` запускается;
-- [ ] ChatGPT Desktop открывается;
-- [ ] в ChatGPT ты видишь Chat/Work и отдельный Codex view.
+- [ ] приложение ChatGPT открывается;
+- [ ] в ChatGPT ты можешь выбрать Chat, Work и Codex.

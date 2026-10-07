@@ -1,20 +1,26 @@
-# Repository instructions
+# Инструкции для работы с курсом
 
-This repository is a Russian-first practical computing course for a non-programmer university student who may be working remotely without in-person technical help.
+Это курс практической компьютерной грамотности для студента, который не занимается программированием и проходит занятия самостоятельно, без помощи специалиста рядом.
 
-When editing it:
+## Язык
 
-- Write primarily in Russian.
-- Keep important English technical terms in parentheses on first use.
-- Never translate shell commands, code, flags, file paths, filenames, or literal error messages.
-- Prefer short practical lessons with a concrete exercise over encyclopedic explanation.
-- Assume the learner starts with no Git, repository, Terminal, or developer-tool knowledge.
-- Every learner-facing lesson must state its prerequisites.
-- Never require a tool, skill, local repository, path, or concept before an earlier lesson has installed or explained it.
-- The public website is the learner's entry point. Do not require cloning this repo before the Git lesson.
-- Keep the directory model consistent: `~/University/Notes`, `~/University/Projects`, `~/University/Sources`, `~/University/Scratch`.
-- Keep coding content at literacy level unless a lesson explicitly says otherwise.
-- For fast-changing OpenAI, Homebrew, GitHub, or software-installation claims, verify against current primary documentation and include the source URL.
-- Date fast-changing guidance when useful.
-- Avoid destructive commands. For Mole, show `--dry-run` before cleanup.
-- Keep external links direct and reputable: primary documentation first, then MIT or other high-quality educational material.
+- Пиши **естественным, грамотным русским языком**, без русско-английского жаргона.
+- Если есть привычный русский эквивалент, используй его: «папка», «путь», «файл», «источник», «вывод команды», «учётная запись», «репозиторий», «резервная копия», «проверка результата».
+- При первом объяснении действительно нужного английского технического термина можно привести его в скобках: «рабочая директория (working directory)». Затем употребляй только русский термин.
+- Сохраняй без перевода названия продуктов, точные надписи интерфейса, команды, параметры, пути, имена файлов, исходный код и дословные сообщения об ошибках.
+- Английские названия лекций MIT можно сохранять как официальные названия, но пояснения к ним должны быть русскими.
+- Это правило относится также к таблицам, заголовкам, учебным запросам к ИИ и комментариям в примерах.
+
+## Педагогическая последовательность
+
+- Предполагай полное отсутствие опыта работы с Terminal, Git и средствами разработки.
+- В каждом уроке явно указывай предварительные требования и проверку результата.
+- Не требуй программу, навык, папку, репозиторий или понятие до того, как оно было создано либо объяснено ранее.
+- Точка входа — публичный сайт; до урока Git не нужно клонировать репозиторий курса.
+- Следуй структуре `~/University/Notes`, `~/University/Projects`, `~/University/Sources`, `~/University/Scratch`.
+- Объясняй практические действия коротко. Python нужен для общей грамотности, а не как полноценный курс программирования.
+- Для меняющихся сведений об OpenAI, Homebrew, GitHub и программах проверяй актуальную первичную документацию и указывай ссылку.
+- Не предлагай опасных команд без объяснения. Перед очисткой Mole используй `--dry-run`.
+- Отдавай предпочтение официальной документации и материалам MIT.
+
+Перед публикацией проверяй не только Markdown и сборку сайта, но и ясность русского языка и последовательность освоения инструментов.

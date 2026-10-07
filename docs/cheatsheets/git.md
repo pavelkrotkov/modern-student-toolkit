@@ -1,6 +1,6 @@
 # Шпаргалка: Git
 
-## Скопировать существующий remote repo
+## Скопировать существующий удалённый репозиторий
 
 ```bash
 cd ~/University/Projects
@@ -9,7 +9,7 @@ cd REPO
 git status
 ```
 
-## Обычная работа в уже существующем repo
+## Работа в существующем репозитории
 
 ```bash
 git status
@@ -21,14 +21,14 @@ git push
 git pull
 ```
 
-## Создать новый local repo
+## Создать новый локальный репозиторий
 
 ```bash
 cd /path/to/project
 git init -b main
 ```
 
-## Создать private GitHub repo из current folder
+## Создать закрытый репозиторий GitHub из текущей папки
 
 ```bash
 gh repo create NAME --private --source=. --remote=origin --push
@@ -41,4 +41,4 @@ pwd
 git status
 ```
 
-Сначала пойми **в какой folder ты находишься**, затем уже думай про Git.
+Сначала разберись, **в какой папке ты находишься**, и только потом выполняй команды Git.

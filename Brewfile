@@ -1,6 +1,6 @@
-# Reference environment for this course.
-# The beginner path installs these tools gradually in the lessons.
-# Do not ask a first-time learner to run `brew bundle` before the Git lesson.
+# Образец набора программ для курса.
+# Начинающий ученик устанавливает программы постепенно, по мере прохождения уроков.
+# Не предлагайте запускать `brew bundle` до урока Git.
 
 brew "git"
 brew "gh"

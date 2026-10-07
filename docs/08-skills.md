@@ -1,25 +1,25 @@
-# 8. Skills и `$teach-me`
+# 8. Навыки Codex (Skills) и `$teach-me`
 
 ## Перед началом
 
-Course repo уже клонирован сюда:
+Репозиторий курса уже скопирован сюда:
 
 ```text
 ~/University/Projects/modern-student-toolkit
 ```
 
-Ты понимаешь, что такое path и local repo.
+Ты понимаешь, что такое путь и локальный репозиторий.
 
-## Что такое skill
+## Что такое навык Codex
 
-Skill — reusable workflow: небольшая папка с `SKILL.md`, которую Codex может использовать как повторяемую инструкцию.
+**Навык (skill)** — набор повторно используемых инструкций в папке с файлом `SKILL.md`. Codex может следовать им при выполнении подходящих задач.
 
 OpenAI:
 <https://developers.openai.com/plugins/concepts/skills>
 
-## 1. Посмотри source `$teach-me`
+## 1. Посмотри исходный файл `$teach-me`
 
-Source skill лежит в уже клонированном course repo:
+Файл навыка находится в уже скопированном репозитории курса:
 
 ```text
 ~/University/Projects/modern-student-toolkit/skills/teach-me/SKILL.md
@@ -31,19 +31,19 @@ Source skill лежит в уже клонированном course repo:
 cat ~/University/Projects/modern-student-toolkit/skills/teach-me/SKILL.md
 ```
 
-Это обычный Markdown file.
+Это обычный файл в формате Markdown.
 
-## 2. Установи skill для своего user account
+## 2. Установи навык для своей учётной записи
 
-Codex поддерживает user-scoped skills в `~/.codex/skills/`.
+Codex поддерживает личные навыки в папке `~/.codex/skills/`.
 
-Создай destination:
+Создай папку назначения:
 
 ```bash
 mkdir -p ~/.codex/skills/teach-me
 ```
 
-Скопируй один file:
+Скопируй файл:
 
 ```bash
 cp ~/University/Projects/modern-student-toolkit/skills/teach-me/SKILL.md \
@@ -56,9 +56,9 @@ cp ~/University/Projects/modern-student-toolkit/skills/teach-me/SKILL.md \
 cat ~/.codex/skills/teach-me/SKILL.md
 ```
 
-Закрой и снова открой ChatGPT Desktop/Codex, чтобы новый skill точно обнаружился.
+Закрой и снова открой приложение ChatGPT, затем перейди в Codex: программа должна обнаружить новый навык.
 
-OpenAI example user-scoped path:
+Пример расположения личного навыка в документации OpenAI:
 <https://developers.openai.com/blog/eval-skills>
 
 ## 3. Первый вызов
@@ -84,22 +84,22 @@ cat ~/.codex/skills/teach-me/SKILL.md
 skills/teach-me/SKILL.md
 ```
 
-раньше была бы скрытым prerequisite.
+раньше ссылалась бы на файл, которого ещё не было на компьютере.
 
 Теперь ты понимаешь весь путь:
 
 ```text
-GitHub remote course
+удалённый репозиторий курса на GitHub
 → git clone
-→ local course repo
+→ локальная копия курса
 → SKILL.md
 → ~/.codex/skills/teach-me/
 → $teach-me
 ```
 
-## 5. Создание собственных skills — только после использования готового
+## 5. Создавай собственные навыки только после знакомства с готовым
 
-Built-in creator:
+Встроенная команда для создания навыков:
 
 ```text
 $skill-creator
@@ -113,8 +113,8 @@ OpenAI:
 - `$lecture-prep`;
 - `$course-review`.
 
-Не создавай десятки skills заранее.
+Не создавай десятки навыков без необходимости.
 
-## Checkpoint
+## Проверка результата
 
-`$teach-me` должен сработать в **другой** folder, например `Codex-Practice`, а не только в course repo. Это подтверждает, что skill установлен user-scoped.
+`$teach-me` должен работать и в **другой** папке, например `Codex-Practice`, а не только в репозитории курса. Это подтверждает, что навык доступен для разных проектов.

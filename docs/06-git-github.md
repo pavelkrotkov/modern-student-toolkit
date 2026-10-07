@@ -1,4 +1,4 @@
-# 6. Git и GitHub: сначала clone, потом свой repo
+# 6. Git и GitHub: сначала копия готового проекта, потом свой репозиторий
 
 ## Перед началом
 
@@ -8,11 +8,11 @@
 
 ## Что такое Git и GitHub
 
-- **Git** хранит историю изменений в folders.
-- **GitHub** хранит repositories на server и даёт web interface.
-- **remote repository** — repo на GitHub.
-- **local repository** — его копия на твоём Mac.
-- **clone** — создать local copy существующего remote repo.
+- **Git** хранит историю изменений в папках.
+- **GitHub** хранит репозитории на сервере и позволяет работать с ними через сайт.
+- **удалённый репозиторий (remote repository)** — репозиторий на GitHub.
+- **локальный репозиторий (local repository)** — копия на твоём Mac.
+- **клонирование (clone)** — получение локальной копии существующего удалённого репозитория.
 
 ## 1. Первый `git clone`: скачай этот курс
 
@@ -23,7 +23,7 @@ cd ~/University/Projects
 pwd
 ```
 
-Убедись, что output заканчивается на:
+Убедись, что выведенный путь заканчивается на:
 
 ```text
 /University/Projects
@@ -49,7 +49,7 @@ pwd
 git status
 ```
 
-Теперь впервые имеет смысл выражение **root of the repository**: это папка `modern-student-toolkit`, внутри которой находятся `README.md`, `docs/`, `Brewfile` и `.git`.
+Теперь можно объяснить, что такое **корень репозитория (repository root)**: это папка `modern-student-toolkit`, внутри которой находятся `README.md`, `docs/`, `Brewfile` и `.git`.
 
 Посмотри:
 
@@ -57,22 +57,22 @@ git status
 ls
 ```
 
-Официальный GitHub guide:
+Официальная инструкция GitHub:
 <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
 
-## 2. Почему clone был первым Git-упражнением
+## 2. Зачем мы начали с клонирования
 
-Ты уже видел этот course как website. Теперь у тебя появилась **local copy его source files**.
+Раньше ты открывал курс как сайт. Теперь у тебя есть **локальная копия исходных файлов курса**.
 
 Это связывает три идеи:
 
 ```text
-GitHub remote repo → git clone → local folder on your Mac
+удалённый репозиторий GitHub → git clone → локальная папка на твоём Mac
 ```
 
-Пока ничего в course repo не редактируй и не push.
+Пока не редактируй файлы курса и не отправляй изменения на GitHub.
 
-## 3. Проверь Brewfile — теперь path существует
+## 3. Проверь Brewfile — теперь файл есть на Mac
 
 Раньше команда была бы непонятной. Теперь можно безопасно проверить:
 
@@ -80,11 +80,11 @@ GitHub remote repo → git clone → local folder on your Mac
 brew bundle check --file ~/University/Projects/modern-student-toolkit/Brewfile
 ```
 
-Она только сообщает, какие entries из reference `Brewfile` установлены. Она не нужна для ежедневной работы.
+Она только сообщает, какие программы из образца `Brewfile` уже установлены. Она не нужна для ежедневной работы.
 
-## 4. GitHub account и CLI
+## 4. Учётная запись GitHub и командная строка
 
-Если GitHub account ещё нет, создай его на <https://github.com/> и включи 2FA.
+Если учётной записи GitHub ещё нет, создай её на <https://github.com/> и включи 2FA.
 
 Затем:
 
@@ -92,22 +92,22 @@ brew bundle check --file ~/University/Projects/modern-student-toolkit/Brewfile
 gh auth login
 ```
 
-Выбирай GitHub.com и browser/HTTPS flow, если CLI предлагает варианты.
+Если программа предлагает варианты, выбери GitHub.com и вход через браузер по HTTPS.
 
-Student benefits:
+Льготы для студентов:
 <https://github.com/education/students>
 
 ## 5. Пять понятий
 
-- **repository** — folder с Git history;
-- **commit** — named snapshot;
-- **diff** — что изменилось;
-- **branch** — отдельная линия history;
-- **push / pull** — отправить commits / получить новые commits.
+- **репозиторий (repository)** — папка, историю изменений в которой хранит Git;
+- **коммит (commit)** — сохранённое состояние файлов с пояснением;
+- **разница между версиями (diff)** — какие строки изменились;
+- **ветка (branch)** — отдельная линия развития проекта;
+- **отправка и получение изменений (push / pull)** — обмен коммитами с удалённым репозиторием.
 
-## 6. Создай свой маленький practice repo
+## 6. Создай свой маленький учебный репозиторий
 
-Не используй course repo. Работай с созданной раньше папкой:
+Не изменяй репозиторий курса. Работай с папкой, созданной в первом уроке:
 
 ```bash
 cd ~/University/Projects/Codex-Practice
@@ -118,7 +118,7 @@ git commit -m "Initial practice files"
 git log --oneline
 ```
 
-Теперь опубликуй **private** repo:
+Теперь создай **закрытый** репозиторий на GitHub:
 
 ```bash
 gh repo create codex-practice --private --source=. --remote=origin --push
@@ -126,9 +126,9 @@ gh repo create codex-practice --private --source=. --remote=origin --push
 
 Открой GitHub.com и найди `codex-practice`.
 
-## 7. Увидь diff
+## 7. Посмотри разницу между версиями
 
-Измени один `.txt` file в Finder или text editor.
+Измени один файл `.txt` в Finder или текстовом редакторе.
 
 ```bash
 cd ~/University/Projects/Codex-Practice
@@ -136,7 +136,7 @@ git status
 git diff
 ```
 
-Посмотри то же изменение в GitHub Desktop.
+Посмотри те же изменения в приложении GitHub Desktop.
 
 Затем:
 
@@ -148,20 +148,20 @@ git push
 
 ## Что пока не нужно
 
-Не учи `rebase`, `cherry-pick`, `bisect`, submodules или сложные merge strategies.
+Пока не изучай `rebase`, `cherry-pick`, `bisect`, подмодули и сложные способы объединения веток.
 
-MIT companion:
+Дополнительная лекция MIT:
 <https://missing.csail.mit.edu/2026/version-control/>
 
-## Checkpoint
+## Проверка результата
 
 Ты должен своими словами объяснить цепочку:
 
-**GitHub repo → clone → local folder → change → diff → commit → push**.
+**репозиторий GitHub → клонирование → локальная папка → изменение → просмотр разницы → коммит → отправка изменений**.
 
-И на Mac должны существовать два разных repo:
+На Mac должны существовать два отдельных репозитория:
 
 ```text
-~/University/Projects/modern-student-toolkit   # public course, cloned
-~/University/Projects/Codex-Practice           # твой private practice repo
+~/University/Projects/modern-student-toolkit   # открытая копия курса
+~/University/Projects/Codex-Practice           # твой закрытый учебный репозиторий
 ```
