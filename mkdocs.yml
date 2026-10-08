@@ -37,6 +37,7 @@ nav:
   - Главная: index.md
   - Учебная работа:
       - 0. Подготовка: 00-start.md
+      - 0а. Пароли и браузер: 00a-passwords-browser.md
       - 1. Mac и файлы: 01-files-terminal.md
       - 2. Работа с ИИ: 03-chat-work-codex.md
       - 3. Источники и заметки: 07-obsidian.md

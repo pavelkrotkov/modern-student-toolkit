@@ -11,6 +11,12 @@
 - [Резервные копии](https://support.apple.com/guide/mac-help/back-up-files-mh35860/mac) и [восстановление](https://support.apple.com/guide/mac-help/restore-files-mh11422/mac) — Time Machine.
 - [Shortcuts на Mac](https://support.apple.com/guide/shortcuts-mac/intro-to-shortcuts-apdf22b0444c/mac) — необязательное продолжение для повторяющихся действий в приложениях.
 
+## Браузер, пароли и секретные ключи
+
+- [Brave: скачать](https://brave.com/download/), [настроить Shields для сайта](https://support.brave.com/hc/en-us/articles/360023646212-How-do-I-configure-global-and-site-specific-Shields-settings) — защита от отслеживания и исключения.
+- [Bitwarden: загрузки](https://bitwarden.com/download/), [расширения](https://bitwarden.com/help/getting-started-browserext/), [Safari на Mac](https://bitwarden.com/help/install-safari-app-extension/) — установка в браузеры.
+- [Bitwarden: iOS](https://bitwarden.com/help/auto-fill-ios/), [Android](https://bitwarden.com/help/auto-fill-android/), [типы записей](https://bitwarden.com/help/managing-items/), [SSH-ключи](https://bitwarden.com/help/about-ssh/) — телефон и хранение секретов.
+
 ## ИИ и проверка источников
 
 - [OpenAI: Chat, Work и Codex](https://learn.chatgpt.com/docs/use-chatgpt) — выбор режима и доступность.
