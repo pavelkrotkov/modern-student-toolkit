@@ -35,5 +35,5 @@ if __name__ == "__main__":
         count, total = calculate(sys.argv[1], CATEGORY)
     except (OSError, ValueError, TypeError, InvalidOperation) as error:
         sys.exit(f"Не удалось посчитать: {error}")
-    print(f"Покупок: {count}")
+    print(f"Строк расходов: {count}")
     print(f"Итого: {total:.2f} евро")

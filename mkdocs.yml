@@ -35,19 +35,28 @@ validation:
 
 nav:
   - Главная: index.md
-  - Основной маршрут:
+  - Учебная работа:
       - 0. Подготовка: 00-start.md
       - 1. Mac и файлы: 01-files-terminal.md
       - 2. Работа с ИИ: 03-chat-work-codex.md
       - 3. Источники и заметки: 07-obsidian.md
       - 4. Документ и таблица: 10-office-research.md
+      - 4а. Ошибки в таблице: spreadsheet-lab.md
+      - 4б. Совместная работа и итог: collaboration.md
+  - Техническая самостоятельность:
       - 5. Terminal и Homebrew: 02-homebrew.md
       - 6. Агент и файлы: 04-codex-folders-computer-use.md
       - 7. Git и GitHub: 06-git-github.md
       - 8. Немного Python: 09-python-literacy.md
       - 9. Итоговая работа: 12-capstone.md
-  - Если застрял: help.md
+  - Повторение и помощь:
+      - Задача через неделю: transfer-check.md
+      - Личный журнал: progress.md
+      - Подсказки по одной: hints.md
+      - Если застрял: help.md
+      - Если окно отличается: interface-reference.md
   - Дополнительно:
+      - Задания по внешним материалам: extensions.md
       - MIT Missing Semester: 05-missing-semester.md
       - Навык $teach-me: 08-skills.md
       - Резервные копии и обслуживание: 11-maintenance.md
@@ -59,4 +68,5 @@ nav:
   - Учебные источники:
       - Условия поездки: practice/trip-brief.md
       - Расценки: practice/trip-prices.md
+      - Заказ для студенческого клуба: practice/print-brief.md
   - Ссылки и источники: resources.md
