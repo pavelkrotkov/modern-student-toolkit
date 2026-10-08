@@ -2,7 +2,7 @@ site_name: Modern Student Toolkit
 site_description: Практическая цифровая грамотность для современного студента
 site_url: https://pavelkrotkov.github.io/modern-student-toolkit/
 repo_url: https://github.com/pavelkrotkov/modern-student-toolkit
-repo_name: pavelkrotkov/modern-student-toolkit
+repo_name: modern-student-toolkit
 edit_uri: edit/main/docs/
 
 theme:
