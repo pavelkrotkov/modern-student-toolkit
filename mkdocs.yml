@@ -41,6 +41,7 @@ nav:
       - 1. Mac и файлы: 01-files-terminal.md
       - 2. Работа с ИИ: 03-chat-work-codex.md
       - 3. Источники и заметки: 07-obsidian.md
+      - 3а. Markdown: 07a-markdown.md
       - 4. Документ и таблица: 10-office-research.md
       - 4а. Ошибки в таблице: spreadsheet-lab.md
       - 4б. Совместная работа и итог: collaboration.md
@@ -66,6 +67,7 @@ nav:
       - Homebrew: cheatsheets/homebrew.md
       - Git: cheatsheets/git.md
       - Работа с ИИ: cheatsheets/codex.md
+      - Markdown: cheatsheets/markdown.md
   - Учебные источники:
       - Условия поездки: practice/trip-brief.md
       - Расценки: practice/trip-prices.md
