@@ -31,6 +31,8 @@
 
 - [Zotero: первые шаги](https://www.zotero.org/support/quick_start_guide), [библиография](https://www.zotero.org/support/creating_bibliographies), [интеграции с редакторами](https://www.zotero.org/support/word_processor_integration).
 - [Obsidian Help](https://help.obsidian.md/) — заметки, ссылки и хранилища.
+- [CommonMark: справочник](https://commonmark.org/help/) и [интерактивный учебник](https://commonmark.org/help/tutorial/) — основной Markdown; [дополнения GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) — списки задач и таблицы.
+- **Markdown в Google Docs (проверено по документации: 2026-10-09):** [новый режим сохранения `.md`](https://support.google.com/docs/answer/18289341?hl=en), [объявление о постепенном запуске 5 октября 2026 года](https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html), [прежний импорт, экспорт и вставка](https://support.google.com/docs/answer/12014036?hl=en).
 - [ONLYOFFICE: импорт CSV](https://helpcenter.onlyoffice.com/docs/userguides/spreadsheet_editor/ImportData.aspx), [сортировка и фильтрация](https://helpcenter.onlyoffice.com/docs/userguides/spreadsheet_editor/SortData.aspx).
 - [DocSpace: доступ к файлам](https://helpcenter.onlyoffice.com/docspace/administration/docspace-sharing-documents.aspx), [история версий](https://helpcenter.onlyoffice.com/docspace/administration/docspace-document-versions.aspx) — основа практики 4б.
 - [Data Carpentry: Data Organization in Spreadsheets](https://datacarpentry.github.io/spreadsheets-socialsci/) — качество, даты и экспорт; [выбранные задания](extensions.md#spreadsheets).
