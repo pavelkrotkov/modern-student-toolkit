@@ -58,6 +58,7 @@ nav:
       - Если застрял: help.md
       - Если окно отличается: interface-reference.md
   - Дополнительно:
+      - Раскладки и печать: touch-typing.md
       - Задания по внешним материалам: extensions.md
       - MIT Missing Semester: 05-missing-semester.md
       - Навык $teach-me: 08-skills.md
